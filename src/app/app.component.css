@@ -1,0 +1,8 @@
+.btn-cancel-default{
+    color: black;
+    /* background-color: blue;  */
+}
+
+.btn-cancel{
+ text-decoration: line-through;
+}
