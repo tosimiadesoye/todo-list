@@ -1,17 +1,6 @@
-
-<div>
-  <input [(ngModel)]="newTodo"   type="text">
-  <button (click)="addTask()">+</button>
-  
-  <div *ngFor="let todo of todos; let index = index">
-    
-      <ul>
-        <li [ngClass]="[todo.description]"> {{todo.description}}</li>
-        <button (click)="deleteTask(index)">x</button>
-        <button (click)="edit(todo.description)">edit</button>
-        <button (click)="crossOver()">cancel</button>
-      </ul>
-
-      
-  </div>
+<div class="app">
+  <header>
+    <h1>Todo List</h1>
+  </header>
+   <app-todos></app-todos>
 </div>

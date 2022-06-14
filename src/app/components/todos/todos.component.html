@@ -1,0 +1,22 @@
+<div class="todos">
+<form>
+    <input 
+    type="text"
+    name="inputTodo"
+    placeholder="Enter todo..."
+    class="todo-input"
+    [(ngModel)]="newTodo"
+    >
+    <button (click)="addTask()" class="todo-submit">+</button>
+  </form>
+    <!-- class is for edit, when completed is true we line through with css and when it's false we do nothing -->
+    <div *ngFor="let todo of todos; let index = index;" class="todo {{ (todo.completed? 'done': '') }}">
+     
+          <div class="id">{{index}}</div>
+          <div class="content" (click)="toggleDone(index)"> {{todo.description}}</div>
+          <button (click)="deleteTask(index)" class="delete">x</button>
+          
+    </div>
+  
+  </div>
+  
